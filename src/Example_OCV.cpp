@@ -28,4 +28,9 @@ int main(int argc, char** argv)
   }
   cout << endl;
 
+  // Finally make some copies, what do you notice about the addresses of the data?
+  Mat Y = X; Mat Z = X.clone(); 
+  cout << "Address of X is " << (unsigned long)X.data << endl; 
+  cout << "Address of Y is " << (unsigned long)Y.data << endl; 
+  cout << "Address of Z is " << (unsigned long)Z.data << endl; 
 }
